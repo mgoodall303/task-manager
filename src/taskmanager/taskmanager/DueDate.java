@@ -3,7 +3,7 @@ package taskmanager;
 public class DueDate {
 	
 	int year;
-	int month;
+	String month;
 	int day;
 
 }

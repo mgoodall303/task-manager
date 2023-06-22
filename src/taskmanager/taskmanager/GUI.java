@@ -4,6 +4,8 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -97,11 +99,24 @@ public class GUI extends JFrame {
 		
 		mainPanel.add(verticalBox);
 		
+		addListeners();
+		
 		getContentPane().add(mainPanel);
 		
 		setSize(500,750);
 		
 		setVisible(true);
+		
+	}
+	
+	private void addListeners() {
+		
+		addTask.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new AddTaskWindow();
+			}			
+		});
 		
 	}
 
